@@ -2,15 +2,15 @@ import fs from "fs/promises"
 
 
 
-console.log("Work");
+// console.log("Work");
 
 export async function getApiResponse(URL) {
     try {
-        console.log("Start");
+        // console.log("Start");
         let response = await fetch(URL);
         let data = await response.json();
         // console.log(data);
-        console.log("Finish");
+        // console.log("Finish");
         return data;
 
     } catch (err) {
@@ -22,11 +22,11 @@ export async function getApiResponse(URL) {
 
 export async function writeJsonFile(data) {
     try {
-        console.log("Started writing");
+        // console.log("Started writing");
         const path = "./data/race_api.json";
-        console.log("It will take a moment...")
+        // console.log("It will take a moment...")
         await fs.writeFile(path, JSON.stringify(data), "utf-8")
-        console.log("Success!");
+        // console.log("Success!");
 
     } catch (err) {
         console.log("Write ERROR:");
