@@ -1,5 +1,5 @@
 import { getApiResponse, writeJsonFile, readJsonFile } from "./services/service.file_service.js";
-import {getRaceName,  getLap } from "./services/service.function_service.js";
+import {getRaceName,  getLap, getTotalCars, getWaitingCars, nextToEnterThePit } from "./services/service.function_service.js";
 // import {} from "./URL_config.js" // It didnot work so I put the config right here.
 
 
@@ -14,10 +14,14 @@ Loading queue data...
     `
 );
 console.log("========== PIT STOP QUEUE ==========");
-await getRaceName()
-await getLap()
+await getRaceName(readJsonFile);
+await getLap(readJsonFile);
+await getTotalCars(readJsonFile);
+await nextToEnterThePit(readJsonFile)
 
 console.log("Cars waiting for pit stop:");
+
+await getWaitingCars(readJsonFile);
 
 //Fetching data from API and making it into an object with .json() meaning receving two promises one after the other:
 const data = await getApiResponse(URL)
