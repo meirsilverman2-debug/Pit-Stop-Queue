@@ -1,0 +1,24 @@
+{
+  "name": "pit-stop-queue",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000P\u0000i\u0000t\u0000-\u0000S\u0000t\u0000o\u0000p\u0000-\u0000Q\u0000u\u0000e\u0000u\u0000e\u0000\r\u0000 \u0000",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meirsilverman2-debug/Pit-Stop-Queue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/meirsilverman2-debug/Pit-Stop-Queue/issues"
+  },
+  "homepage": "https://github.com/meirsilverman2-debug/Pit-Stop-Queue#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
