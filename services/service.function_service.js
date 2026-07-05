@@ -68,7 +68,7 @@ export async function nextToEnterThePit(callback) {
 };
 
 
-await async function searchCarByNumber(num, callback){
+export async function searchCarByNumber(num, callback){
     try {
         const data = callback();
         const foundCar = data.cars.find((car) => car.carNumber === num);

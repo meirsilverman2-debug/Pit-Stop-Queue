@@ -1,5 +1,5 @@
 import { getApiResponse, writeJsonFile, readJsonFile } from "./services/service.file_service.js";
-import {getRaceName,  getLap, getTotalCars, getWaitingCars, nextToEnterThePit } from "./services/service.function_service.js";
+import {getRaceName,  getLap, getTotalCars, getWaitingCars, nextToEnterThePit, searchCarByNumber } from "./services/service.function_service.js";
 // import {} from "./URL_config.js" // It didnot work so I put the config right here.
 
 
@@ -34,7 +34,12 @@ await writeJsonFile(data)
 // Reading from json data:
 const jsonData = await readJsonFile()
 console.log(jsonData)
+console.log("=====================================");
 
+console.log()
+
+console.log("--- Search for a car by number ---");
+await searchCarByNumber(44, readJsonFile);
 
 
 console.log("Process completed successfully. The pit wall is up to date.");
